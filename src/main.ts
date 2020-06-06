@@ -9,4 +9,6 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+//when angular is building the application, the whitespaces in a css file are removed.
+//This config makes the angular preserve the whitespaces for the application (dev environment)
+platformBrowserDynamic().bootstrapModule(AppModule) //, {preserveWhitespaces: true});

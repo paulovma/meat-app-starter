@@ -18,6 +18,11 @@
       "../node_modules/@types"
     ]
   },
+  //when angular is building the application, the whitespaces in a css file are removed.
+  //This config makes the angular preserve the whitespaces for the application (prod and dev environment)
+  "angularCompilerOptions": {
+    "preserveWhitespaces": true
+  },
   "exclude": [
     "test.ts",
     "**/*.spec.ts"

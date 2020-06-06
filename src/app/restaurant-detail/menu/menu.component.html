@@ -1,0 +1,17 @@
+<!--INÍCIO DO MENU -->
+<div class="col-md-9 col-xs-12">
+
+    <!-- subscribe to the menu observable; iterates over the json; apply the iterated item to the menuItem of the menu-item.component -->
+    <!-- the (add) event was created by the menu-item component-->
+    <mt-menu-item 
+      *ngFor="let item of menu | async" 
+      [menuItem]="item"
+      (add)="shoppingCart.addItem($event)"> 
+    </mt-menu-item>
+
+</div>
+<div class="col-md-3 col-xs-12">
+  <!-- #componentName creates a template referente which can be used to call the methods on the component, like in line 9 -->
+  <mt-shopping-cart #shoppingCart ></mt-shopping-cart>
+</div>
+<!-- FIM DO MENU -->
